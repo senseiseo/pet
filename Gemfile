@@ -18,7 +18,6 @@ gem 'pg'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
