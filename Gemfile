@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sdoc', group: :doc
 gem 'pg'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'rails-controller-testing'
