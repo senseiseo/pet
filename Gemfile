@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.5'
 
 gem 'rails', '~> 5.2.0'
 gem 'bootstrap-sass'
@@ -14,10 +14,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sdoc', group: :doc
-gem 'pg'
+#gem 'pg'
 gem 'bcrypt'
+gem 'wdm', '>= 0.1.0'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rails-controller-testing'
   gem 'byebug'
   gem 'listen', '>= 3.0.5', '< 3.2'
