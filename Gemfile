@@ -17,6 +17,7 @@ gem 'sdoc', group: :doc
 #gem 'pg'
 gem 'bcrypt'
 gem 'wdm', '>= 0.1.0'
+gem 'bootstrap'
 
 group :development, :test do
   gem 'sqlite3'
