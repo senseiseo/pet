@@ -6,7 +6,7 @@ ruby '2.6.5'
 gem 'rails', '~> 5.2.0'
 gem 'bootstrap-sass'
 gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
@@ -18,6 +18,7 @@ gem 'sdoc', group: :doc
 gem 'bcrypt'
 gem 'wdm', '>= 0.1.0'
 gem 'bootstrap'
+
 
 group :development, :test do
   gem 'sqlite3'

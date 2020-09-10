@@ -243,7 +243,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   rails-controller-testing
   rails_12factor
-  sass-rails (~> 5.0)
+  sass-rails
   sdoc
   spring
   spring-watcher-listen (~> 2.0.0)
