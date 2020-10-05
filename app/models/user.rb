@@ -34,4 +34,18 @@ class User < ApplicationRecord
   def authenticated?(remember_token)
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
+
+ # Возвращает дайджест данной строки
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
+
+   # Возвращает случайный токен
+  def User.new_token
+    SecureRandom.urlsafe_base64
+  end
+   # Запоминает пользователя в базе данных для использования в постоянной сессии.
+
 end

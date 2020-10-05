@@ -28,5 +28,6 @@ test "valid signup information with account activation" do
                                          password_confirmation: "password" } }
     end
      assert_equal 0, ActionMailer::Base.deliveries.size
+     assert is_logged_in?
   end
 end
