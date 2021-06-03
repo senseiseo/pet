@@ -1,0 +1,12 @@
+<h1> @questions </h1>
+
+<%# <%= @questions.inspect%> 
+
+<% @questions.each do |questions| %>
+  <h2><%= questions.title %>
+  <time datetime="<%= questions.formatted_ctreated_at%>">
+    <%= questions.formatted_ctreated_at %> 
+  </time>
+  <h2><%= questions.body %>
+  <h2> =============== </h2>
+<% end %>
