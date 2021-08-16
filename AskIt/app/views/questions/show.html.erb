@@ -1,0 +1,9 @@
+<h1><%= @question.title%> </h1>
+
+<p> 
+<time datetime="<%= @question.formatted_ctreated_at%>">
+    <%= @question.formatted_ctreated_at %> 
+  </time>
+  <br>
+  <%= @question.body%>
+</p>

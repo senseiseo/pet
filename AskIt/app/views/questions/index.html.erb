@@ -2,11 +2,16 @@
 
 <%# <%= @questions.inspect%> 
 
-<% @questions.each do |questions| %>
-  <h2><%= questions.title %>
-  <time datetime="<%= questions.formatted_ctreated_at%>">
-    <%= questions.formatted_ctreated_at %> 
+<% @questions.each do |question| %>
+  <h2><%= question.title %>
+  <time datetime="<%= question.formatted_ctreated_at%>">
+    <%= question.formatted_ctreated_at %> 
   </time>
-  <h2><%= questions.body %>
+  <h2><%= question.body %>
   <h2> =============== </h2>
+
+  <br>
+   <%= link_to 'Show', question_path(question) %>
+   <%= link_to 'Edit', edit_question_path(question) %>
+   <%= link_to 'Destroy', question_path(question), remote: true ,data: {method: :delete, confirm: 'Точно?'}, %>
 <% end %>
