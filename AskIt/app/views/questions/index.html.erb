@@ -8,12 +8,10 @@
     <%= question.formatted_ctreated_at %> 
   </time>
   <h2><%= question.body %>
-  <h2> =============== </h2>
+  <h2> =============== </h2> 
 
   <br>
    <%= link_to 'Show', question_path(question) %>
    <%= link_to 'Edit', edit_question_path(question) %>
-    <%= link_to 'Destroy', question_path(question),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+   <%= link_to 'Destroy', question_path(question), method: :delete, data: { confirm: "Удалить?" } %>
 <% end %>
