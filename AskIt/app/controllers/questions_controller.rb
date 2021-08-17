@@ -1,11 +1,12 @@
 class QuestionsController < ApplicationController
+  before_action :find_question , only: %i[show destroy edit update]
  
   def show 
-    @question = Question.find(params[:id])
+    
   end 
 
   def edit 
-    @question = Question.find(params[:id])
+    
   end 
 
   def index
@@ -19,6 +20,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new question_params
     if @question.save
+      flash[:success] = "Вопрос создан!"
       redirect_to questions_path
     else
       render :new
@@ -26,8 +28,9 @@ class QuestionsController < ApplicationController
   end
 
   def update 
-    @question = Question.find(params[:id])
+    
     if @question.update question_params
+      flash[:success] = "Вопрос обновлен!"
       redirect_to questions_path
     else
       render :edit
@@ -35,8 +38,9 @@ class QuestionsController < ApplicationController
   end 
 
   def destroy
-    @question = Question.find(params[:id])
+    
     @question.destroy
+    flash[:success] = "Вопрос удален"
     redirect_to questions_path
   end 
 
@@ -45,4 +49,7 @@ class QuestionsController < ApplicationController
   def question_params
     params.require(:question).permit(:title, :body)
   end
+  def find_question 
+    @question = Question.find(params[:id])
+  end 
 end
