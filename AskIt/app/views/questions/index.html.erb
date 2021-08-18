@@ -1,6 +1,7 @@
 <%provide :page_title, 'Questions'%>
 <% currently_at 'Questions' %>
 <h1 class="mb-4">Questions</h1>
+<%= pagy_bootstrap_nav @pagy %>
 
 <%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg' %>
 <% @questions.each do |question| %>
@@ -25,4 +26,4 @@
   </article>
 <% end %>
    
-
+<%= pagy_bootstrap_nav @pagy %>
