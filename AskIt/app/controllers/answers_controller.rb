@@ -1,9 +1,8 @@
 class AnswersController < ApplicationController
-  before_action :set_question!
+  before_action :set_question! ,only: %i[ destroy create edit update]
 
   def create
     @answer = @question.answers.build answer_params
-
     if @answer.save
       flash[:success] = "Answer created!"
       redirect_to question_path(@question)
@@ -12,6 +11,20 @@ class AnswersController < ApplicationController
       render 'questions/show'
     end
   end
+
+  def edit 
+    @answer = @question.answers.find params[:id]
+  end 
+
+  def update 
+    @answer = @question.answers.find params[:id]
+    if @answer.update answer_params
+      flash[:success] = "Ответ обновлен!"
+      redirect_to questions_path(@question)
+    else
+      render :edit
+    end
+  end 
 
   def destroy
     answer = @question.answers.find params[:id]
