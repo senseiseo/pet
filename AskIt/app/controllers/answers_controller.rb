@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
     @answer = @question.answers.build answer_params
     if @answer.save
       flash[:success] = "Answer created!"
-      redirect_to question_path(@question)
+      redirect_to question_path(@question, anchor: "answer-#{@answer.id}")
     else
       @answers = @question.answers.order created_at: :desc
       render 'questions/show'

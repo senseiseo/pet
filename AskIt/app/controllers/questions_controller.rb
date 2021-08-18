@@ -28,8 +28,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def update 
-    
+  def update   
     if @question.update question_params
       flash[:success] = "Вопрос обновлен!"
       redirect_to questions_path
@@ -39,7 +38,6 @@ class QuestionsController < ApplicationController
   end 
 
   def destroy
-    
     @question.destroy
     flash[:success] = "Вопрос удален"
     redirect_to questions_path
