@@ -82,6 +82,7 @@ GEM
     erubi (1.10.0)
     faker (2.18.0)
       i18n (>= 1.6, < 2)
+    ffi (1.15.1)
     ffi (1.15.1-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -97,9 +98,13 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.0.3)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
+    nokogiri (1.11.6)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     nokogiri (1.11.6-x64-mingw32)
       racc (~> 1.4)
     pagy (4.10.2)
@@ -145,6 +150,8 @@ GEM
     ruby2_keywords (0.0.5)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -187,6 +194,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
